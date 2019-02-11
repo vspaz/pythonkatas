@@ -78,3 +78,9 @@ def test_empty_enumerate():
     linked_list = _populate_list(num=0)
     list_values = linked_list.enumerate()
     assert None is next(list_values, None)
+
+
+def test_contains():
+    linked_list = _populate_list(10)
+    assert not linked_list.contains(10)
+    assert linked_list.contains(5)

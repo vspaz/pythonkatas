@@ -73,3 +73,10 @@ class LinkedList:
         while current is not None:
             yield current.value
             current = current.next
+
+    def contains(self, target):
+        for value in self.enumerate():
+            if value is None:
+                return False
+            if value == target:
+                return True

@@ -7,13 +7,12 @@ class LinkedList:
         return not self.count
 
     def add_first(self, node):
-        if self.is_empty():
-            self.head = self.tail = node
-        else:
-            temp = self.head
-            node.next = temp
-            self.head = node
+        temp = self.head
+        self.head = node
+        self.head.next = temp
         self.count += 1
+        if self.count == 1:
+            self.tail = self.head
 
     def add_last(self, node):
         if self.is_empty():

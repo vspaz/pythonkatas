@@ -20,5 +20,6 @@ def postfix_calculator(expression):
             num1 = stack.pop()
             num2 = stack.pop()
             stack.push(OPERATIONS[token](num2, num1))
-
+        else:
+            raise RuntimeError("Invalid token!")
     return stack.pop()

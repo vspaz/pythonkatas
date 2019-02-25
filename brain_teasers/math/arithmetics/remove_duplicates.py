@@ -1,5 +1,5 @@
 
-nums = [1, 1, 2,2, 50, 60, 60, 60]
+nums = [1, 1, 2, 2, 50, 60, 60, 60]
 
 
 def remove_duplicates(nums):
@@ -14,4 +14,5 @@ def remove_duplicates(nums):
     return nums
 
 
-print(remove_duplicates(nums))
+if __name__ == "__main__":
+    print(remove_duplicates(nums))

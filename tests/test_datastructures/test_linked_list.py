@@ -79,3 +79,12 @@ def test_contains():
     linked_list = list_helpers._populate_list(10)
     assert not linked_list.contains(10)
     assert linked_list.contains(5)
+
+
+def test_reverse():
+    linked_list = list_helpers._populate_list(10)
+    for i in linked_list.enumerate():
+        print(i)
+    linked_list.reverse()
+    for i in linked_list.enumerate():
+        print(i)

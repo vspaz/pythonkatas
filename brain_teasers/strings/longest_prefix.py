@@ -1,4 +1,4 @@
-def longest_prefix(self, strs: 'List[str]') -> 'str':
+def longest_prefix(strs):
     if not strs:
         return ""
     if len(strs) == 1:

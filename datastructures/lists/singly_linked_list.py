@@ -1,3 +1,6 @@
+from datastructures.lists.node import SingleLinkedNode
+
+
 class LinkedList:
     def __init__(self):
         self.head = self.tail = None
@@ -79,3 +82,41 @@ class LinkedList:
                 return False
             if value == target:
                 return True
+
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current is not None:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+
+
+def merge_two_lists(list1, list2):
+    head = tail = SingleLinkedNode()
+    while list1 and list2:
+        if list1.value < list2.value:
+            tail.next, list1 = list1, list1.next
+        else:
+            tail.next, list2 = list2, list2.next
+        tail = tail.next
+
+    tail.next = list1 or list2
+    return head.next
+
+
+def has_cyclity(head, head2):
+    list1_ids = set()
+    current = head
+    while current is not None:
+        list1_ids.add(id(current))
+        current = current.next
+
+    current = head2
+    while current is not None:
+        if id(current) in list1_ids:
+            return True
+        current = current.next
+    return False

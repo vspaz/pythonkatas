@@ -32,4 +32,5 @@ def perms(idx):
         perms(idx + 1)
         used[i] = False
 
+
 perms(0)

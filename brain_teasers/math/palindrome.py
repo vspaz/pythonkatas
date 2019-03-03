@@ -12,8 +12,9 @@ def is_palindrome(x):
         smallest_num = x % 10
         if smallest_num != biggest_num:
             return False
-        x //= num_of_tens
-        x %= 10
+        x %= num_of_tens
+        x //= 10
+        num_of_tens //= 100
     return True
 
 
@@ -31,3 +32,4 @@ if __name__ == "__main__":
     assert is_alpha_numeric_palindrome(astring="boofoob")
     assert not is_alpha_numeric_palindrome(astring="foobar")
     assert is_alpha_numeric_palindrome(astring="ofo")
+    assert is_palindrome(111)

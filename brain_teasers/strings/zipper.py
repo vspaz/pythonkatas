@@ -7,17 +7,16 @@ def zipper(astring):
     if len(astring) == 1:
         return astring + str(len(astring))
     char_and_count = []
-    char = prev = astring[0]
+    prev = astring[0]
     count = 1
     for letter in astring[1:]:
-        if letter == char:
-            prev = char
+        if letter == prev:
             count += 1
         else:
             char_and_count.append(prev + str(count))
-            char = prev = letter
-            count = 1
-    char_and_count.append(char + str(count))
+            count = 1  # reset counter
+        prev = letter
+    char_and_count.append(prev + str(count))
     return "".join(char_and_count)
 
 

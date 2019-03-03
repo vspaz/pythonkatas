@@ -6,7 +6,7 @@ def get_total():
         user_input = input("Please enter some num: \n")
         try:
             total += float(user_input)
-        except ValueError:
+        except RuntimeError:
             break
     return total
 

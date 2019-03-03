@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 def get_anagrams(word, word_array):
     if not word or not word_array:
         raise RuntimeError("Input parameters can't be empty!")

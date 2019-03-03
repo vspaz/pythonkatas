@@ -1,8 +1,8 @@
 def merge_sort(a_list):
-    if len(a_list) > 1:  # check if it's a base case; the base case is 1 or 0 item
+    if len(a_list) > 1:  # check if it's a base case; the base case is 1 or 0
         mid = len(a_list) // 2
         left_half = a_list[: mid]
-        right_half = a_list[mid :]
+        right_half = a_list[mid:]
 
         merge_sort(left_half)
         merge_sort(right_half)

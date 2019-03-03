@@ -31,5 +31,5 @@ def count_chars2(astring):
 
 
 if __name__ == "__main__":
-    print(count_chars(astring="foo" * 1734 + "00"))
-    print(count_chars2(astring="hellodarknessmyoldfriend" * 5 + str(0) + str(0)))
+    print(count_chars("foo" * 1734 + "00"))
+    print(count_chars2("hellodarknessmyoldfriend" * 5 + str(0) + str(0)))
